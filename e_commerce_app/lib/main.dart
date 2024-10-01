@@ -1,5 +1,8 @@
 import 'package:e_commers_app/core/theme/app_theme.dart';
+import 'package:e_commers_app/presentation/splash/bloc/splash_cubit.dart';
+import 'package:e_commers_app/presentation/splash/pages/splash.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() => runApp(const MyApp());
 
@@ -8,14 +11,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'E-coomerce',
-      theme: AppTheme.appTheme,
-      home: const Scaffold(
-        body: Center(
-          child: Text('Hello World'),
-        ),
+    return BlocProvider(
+      create: (BuildContext context) => SplashCubit()..appStarted(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'E-coomerce',
+        theme: AppTheme.appTheme,
+        home: const SplashPage(),
       ),
     );
   }
