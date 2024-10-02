@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 class TextFieldAuth extends StatelessWidget {
-  const TextFieldAuth({super.key});
+  final String hintText;
+  const TextFieldAuth({super.key, required this.hintText});
 
   @override
   Widget build(BuildContext context) {
-    return const TextField(
-      decoration:  InputDecoration(
-        hintText: 'Email Address',
+    return TextField(
+      decoration: InputDecoration(
+        hintText: hintText,
       ),
     );
   }

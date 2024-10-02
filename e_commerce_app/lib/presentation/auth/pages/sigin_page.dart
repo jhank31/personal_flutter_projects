@@ -1,4 +1,5 @@
 import 'package:e_commers_app/common/helpers/size_screen.dart';
+import 'package:e_commers_app/common/widgets/widgets.dart';
 import 'package:e_commers_app/presentation/auth/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -13,16 +14,27 @@ class SinginPage extends StatelessWidget {
           horizontal: 16,
           vertical: context.screenHeight(hisVar: 0.15),
         ),
-        child: const Column(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            TitleTextAuth(
+            const TitleTextAuth(
               title: 'Sign In',
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            TextFieldAuth(),
+            const TextFieldAuth(hintText: 'Email Address',),
+            const SizedBox(
+              height: 20,
+            ),
+            BasicAppButton(
+              onPressed: () {},
+              title: 'Continue',
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            const CreateAccountTextButton(),
           ],
         ),
       ),
