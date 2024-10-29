@@ -22,37 +22,30 @@ class _HomeScreenView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: const [
-
         _CustomListTile(
             title: 'Un Bloc simple',
             subTitle: 'Un uso simple de un Cubit',
             location: '/simple-cubit'),
-
         _CustomListTile(
             title: 'Cubit + Go_Router',
             subTitle: 'Un uso aplicado',
             location: '/cubit-router'),
-
         _CustomListTile(
             title: 'Multiples cubits',
             subTitle: 'Multiples cubits en acción',
             location: '/cubit-state'),
-
         _CustomListTile(
             title: 'Bloc - GuestBloc',
             subTitle: 'Un bloc para el manejo de invitados',
             location: '/guest-bloc'),
-
         _CustomListTile(
             title: 'Pokemon Bloc',
             subTitle: 'Bloc con futures y caché',
             location: '/pokemon-bloc'),
-
         _CustomListTile(
-            title: 'Blocs con Blocs',
-            subTitle: 'Blocs que dependen de otros blocs',
-            location: '/blocs-with-blocs'),
-
+            title: 'New thread',
+            subTitle: 'Asignar nuevos hilos',
+            location: '/assing-new-thread'),
       ],
     );
   }
