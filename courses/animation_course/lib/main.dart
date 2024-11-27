@@ -19,6 +19,6 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         debugShowMaterialGrid: false,
         title: 'Material App',
-        home: const Example3());
+        home: const Example2());
   }
 }
