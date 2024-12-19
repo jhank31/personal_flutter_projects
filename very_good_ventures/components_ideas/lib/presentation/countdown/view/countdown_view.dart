@@ -1,6 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:components_ideas/core/theming/core/bloc/bloc/theme_bloc.dart';
 import 'package:components_ideas/core/theming/theme/themes.dart';
-import 'package:components_ideas/features/countdown/bloc/countdown_bloc.dart';
+import 'package:components_ideas/presentation/countdown/bloc/countdown_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -12,7 +13,14 @@ class CountdownView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Cuenta regresiva'),
-        centerTitle: true,
+        leading: AutoLeadingButton(
+          builder: (context, leadingType, action) {
+            return IconButton(
+              icon: const Icon(Icons.arrow_back_ios_new_rounded),
+              onPressed: action,
+            );
+          },
+        ),
       ),
       body: Center(
         child: BlocBuilder<CountdownBloc, CountdownState>(

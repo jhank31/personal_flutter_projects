@@ -96,6 +96,7 @@ abstract class AppTheme extends Equatable {
         ),
         appBarTheme: AppBarTheme(
           foregroundColor: baseColorPalette.white,
+          centerTitle: true,
           iconTheme: IconThemeData(
             color: baseColorPalette.white,
           ),
@@ -112,6 +113,15 @@ abstract class AppTheme extends Equatable {
             borderRadius: BorderRadius.circular(8),
           ),
           color: baseColorPalette.white,
+        ),
+        listTileTheme: ListTileThemeData(
+          iconColor: baseColorPalette.white,
+          textColor: baseColorPalette.white,
+          tileColor: baseColorPalette.primaryColor,
+          contentPadding: const EdgeInsets.symmetric(horizontal: 16),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+          ),
         ),
         useMaterial3: true,
         fontFamily: typography.primaryFontFamily,
