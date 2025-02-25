@@ -1,3 +1,4 @@
+import 'package:components_ideas/core/router/bloc/routes_bloc.dart';
 import 'package:components_ideas/core/theming/core/bloc/bloc/theme_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -17,6 +18,9 @@ class BlocDependencyInjector extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) => ThemeBloc()..add(const BlocThemeInitEvent()),
+        ),
+        BlocProvider(
+          create: (context) => RoutesBloc()..add(const RoutesInitEvent()),
         ),
       ],
       child: child,

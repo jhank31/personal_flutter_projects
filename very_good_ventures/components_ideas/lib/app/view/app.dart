@@ -6,25 +6,25 @@ import 'package:components_ideas/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+//! se crea una instancia de AppRouter afuera del build para evitar
+//! que se cree una nueva instancia cada vez que se llama al build
+//! y se evita que se pierda el estado de la navegación
+final appRouter = AppRouter();
+
 class App extends StatelessWidget {
   const App({super.key});
   @override
   Widget build(BuildContext context) {
-    final appRouter = AppRouter();
-    return DependencyInjector(
+    return const DependencyInjector(
       child: AppLifeCycleListener(
-        child: _RouterWidget(
-          appRouter: appRouter,
-        ),
+        child: _RouterWidget(),
       ),
     );
   }
 }
 
 class _RouterWidget extends StatelessWidget {
-  const _RouterWidget({required this.appRouter});
-
-  final AppRouter appRouter;
+  const _RouterWidget();
 
   @override
   Widget build(BuildContext context) {

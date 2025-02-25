@@ -7,18 +7,18 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 @RoutePage()
 class CountdownPage extends StatelessWidget {
   const CountdownPage({
-    required this.targetDateTime,
+    this.targetDateTime,
     super.key,
   });
 
-  final DateTime targetDateTime;
+  final DateTime? targetDateTime;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: BlocProvider(
         create: (BuildContext context) => CountdownBloc()
-          ..add(StartCountdownEvent(targetDateTime: targetDateTime)),
+          ..add(StartCountdownEvent(targetDateTime: targetDateTime!)),
         child: const CountdownView(),
       ),
     );

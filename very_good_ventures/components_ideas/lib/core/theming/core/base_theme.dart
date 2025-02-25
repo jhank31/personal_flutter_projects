@@ -123,6 +123,11 @@ abstract class AppTheme extends Equatable {
             borderRadius: BorderRadius.circular(8),
           ),
         ),
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: baseColorPalette.primaryColor,
+          selectedItemColor: baseColorPalette.white,
+          unselectedItemColor: baseColorPalette.white.withValues(alpha: 0.5),
+        ),
         useMaterial3: true,
         fontFamily: typography.primaryFontFamily,
         brightness: brightness,
