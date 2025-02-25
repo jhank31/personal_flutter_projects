@@ -1,0 +1,2 @@
+C:/Users/jhank/flutter_personal/my_projects/very_good_ventures/components_ideas/android/app/.cxx/Debug/wz662u6r/x86_64/CMakeFiles/edit_cache.dir
+C:/Users/jhank/flutter_personal/my_projects/very_good_ventures/components_ideas/android/app/.cxx/Debug/wz662u6r/x86_64/CMakeFiles/rebuild_cache.dir

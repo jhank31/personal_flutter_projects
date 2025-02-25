@@ -32,6 +32,7 @@ class AppRouter extends RootStackRouter {
                 AutoRoute(page: HomeRoute.page, initial: true),
                 AutoRoute(page: CountdownRoute.page),
                 AutoRoute(page: ThemeRoute.page),
+                AutoRoute(page: CounterRoute.page),
               ],
             ),
             AutoRoute(page: MyAccountRoute.page),

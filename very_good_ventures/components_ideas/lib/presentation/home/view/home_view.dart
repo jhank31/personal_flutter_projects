@@ -46,6 +46,17 @@ class HomeView extends StatelessWidget {
                           ),
                         ),
                   ),
+                  ListTile(
+                    title: const Text('Contador'),
+                    trailing: const Icon(Icons.arrow_forward_ios_rounded),
+                    leading: const Icon(Icons.lock_clock),
+                    onTap: () => context.read<RoutesBloc>().navigationHelper(
+                          routeName: CounterRoute.name,
+                          onNavigate: () => context.router.push(
+                            const CounterRoute(),
+                          ),
+                        ),
+                  ),
                 ],
               ),
             ),
